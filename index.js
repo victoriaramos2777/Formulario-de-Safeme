@@ -1,13 +1,16 @@
 //obtener informacion de la forma
 const nombre =document.getElementById("name");
 const correo =document.getElementById("correo");
+const trabajo= document.getElementById("trabajo");
+const contac= document.getElementById("phone");
+const informacion = document.getElementById("info");
 //llamar la formula
 
 const form =document.getElementById ("forma");
 
 //constante de contenedor del contenido inyectado con js
 
-const contenedor = document.getElementById("cont")
+const contenedor = document.getElementById("contenedor")
 
 
 //crear evenlistener para la form
@@ -20,23 +23,25 @@ form.addEventListener( "submit" , (event) =>{
 
     const formulario ={
         name: nombre.value,
-        correo: correo.value,
+        email: correo.value,
+        work: trabajo.value,
+        telefono: contac.value,
+        info:informacion.value,
+
     }
 
-    const {name, correo} = formulario;
+    const {name, email, work, telefono, info} = formulario;
 
-    const cuadrohtmlconInfo = crearCuadroDeforma(name, correo)
+    const cuadrohtmlconInfo = crearCuadroDeforma(name, email, work, telefono, info);
 
     console.log(formulario);
 
-     container.insertAdjacentHTML('beforeend',cuadrohtmlconInfo)
+     contenedor.insertAdjacentHTML('beforeend', cuadrohtmlconInfo);
 });
   
 
 
-const formulario = {
-    
-}
+
 // llamar el boton submit 
 const submit = document.getElementById("submit");
 
@@ -48,15 +53,39 @@ submit.addEventListener("click", (e) => {
 
 
 
-function crearCuadroDeforma( name,correo) {
+function crearCuadroDeforma( name, email, work, telefono, info) {
     
-    const cuadrohtml = `<div class="contenido">
-    <h3 class="conteinido__titulo">${name}</h3>
-    <p class="contenido__p">${correo}</p>
-    </div>`
+    const cuadrohtml = `
+    <footer class="foot">
+    <div class="foot__cont3">
+       <img src="./assets/img/y2020-05-19-04_generated.jpg" class="foot__cont3__image" alt="">
+       <h4 id="text1" class="">${name}</h4>
+       <h4 id="text1" class="">${work}</h4>
+        
+    </div>
+    <div id="respuesta" >
+    <div>
+          <h2 class="info">informacion</h2>
+    </div>
+       <div class="contenido">
+          <input type="text" placeholder=" "class="contenido__input">
+          <label for="email"class="contenido__input__item">${email}</label>
+        </div>
+       <div class="contenido">
+          <input type="text" placeholder=" "class=" contenido__input">
+          <label for="email"class="contenido__input__item">${telefono}</label>
+        </div>
+        <div class="contenido" id="block3">
+          <input type="text" placeholder=" "class="contenido__input">
+          <label for="email"class=" contenido__input__item">${info}</label>
+       </div>
+       </form>
+    </div>
+    
+  </footer>`
 
     return cuadrohtml;
-}const cuadrohtmlconInfo = crearCuadroDeforma ()
+}
     
 // Llamar al button submit
 
