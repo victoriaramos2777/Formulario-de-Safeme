@@ -8,8 +8,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
       </style>
-      
-    <title>Formulario de Safeme </title>
+       <title>Formulario de Safeme </title>
 </head>
 <body>
     <header>
@@ -18,47 +17,61 @@
            
            <div class="form__title__cont">
 
-                  <div class="form__title__cont2">
+                  <div class="form__title__cont__cont2">
                      <input type="text" id="name" placeholder=" " class="form__title__cont__cont2__in">
                      <label for="name" class="form__title__cont__cont2__in__la">Nombre</label>
-                     <span class="form__title__cont__cont2__in__la__sp" ></span>
                   </div>
+                  
+                  <div class="form__title__cont__cont2">
+                    <input type="text" id="correo" placeholder=" " class="form__title__cont__cont2__in">
+                    <label for="name" class="form__title__cont__cont2__in__la">correo</label>
+                 </div>
 
-                  <div class="form__title__cont2">
+                 <div class="form__title__cont__cont2">
                     <input type="text" id="name" placeholder=" " class="form__title__cont__cont2__in">
                     <label for="name" class="form__title__cont__cont2__in__la">Trabajo</label>
-                    <span class="form__title__cont__cont2__in__la__sp" ></span>
+                 </div>
+                 <div class="form__title__cont__cont2">
+                    <input type="text" id="phone" placeholder=" " class="form__title__cont__cont2__in">
+                    <label for="number" class="form__title__cont__cont2__in__la" >Telefono</label>
                  </div>
 
-                 <div class="form__title__cont2">
+                 <div class="form__title__cont__cont2" id="completo">
                     <input type="text" id="name" placeholder=" " class="form__title__cont__cont2__in">
-                    <label for="name" class="form__title__cont__cont2__in__la">Sobre ti</label>
-                    <span class="form__title__cont__cont2__in__la__sp" ></span>
-                 </div>
-
-                 <div class="form__title__cont2">
-                    <input type="text" id="correo" placeholder=" " class="form__title__cont__cont2__in">
-                    <label for="name" class="form__title__cont__cont2__in__la" >correo</label>
-                    <span class="form__title__cont__cont2__in__la__sp" ></span>
-                 </div>
-
-                 <div class="form__title__cont2">
-                    <input type="text" id="name" placeholder=" " class="form__title__cont__cont2__in">
-                    <label for="name" class="form__title__cont__cont2__in__la">Telefono</label>
-                    <span class="form__title__cont__cont2__in__la__sp" ></span>
+                    <label for="name"     class="form__title__cont__cont2__in__la">Sobre ti</label>
                  </div>
                    
+               </div>
                  <div class="boton">
-                  <input type="submit" class="submit" id="submit" value="Enviar">
+                  <input type="submit" class="boton__submit" id="submit" value="Enviar">
                  </div>
 
 
 
 
-           </div>
          </form>
 
     </header>
+
+    <footer id="footer">
+      <div id="contenedor">
+         <img src="" class="image" alt="">
+         <h4 id="text1" class="">Nombre</h4>
+          <h4 id="text2"> Trabajo</h4>
+      </div>
+      <div>
+         <form>
+            <input type="text" placeholder=" ">
+            <label for="name">Imformacion</label>
+            <input type="text" placeholder=" ">
+            <label for="email"> correo</label>
+            <input type="text" placeholder=" ">
+            <label for="email"> correo</label>
+            <input type="text" placeholder=" ">
+            <label for="email"> correo</label>
+         </form>
+      </div>
+    </footer>
     <script src="./index.js"></script>
 </body>
 </html>

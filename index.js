@@ -7,7 +7,9 @@ const form =document.getElementById ("forma");
 
 //constante de contenedor del contenido inyectado con js
 
-const contenedor = document.getElementById("")
+const contenedor = document.getElementById("cont")
+
+
 //crear evenlistener para la form
 
 
@@ -21,8 +23,13 @@ form.addEventListener( "submit" , (event) =>{
         correo: correo.value,
     }
 
+    const {name, correo} = formulario;
+
+    const cuadrohtmlconInfo = crearCuadroDeforma(name, correo)
+
     console.log(formulario);
 
+     container.insertAdjacentHTML('beforeend',cuadrohtmlconInfo)
 });
   
 
@@ -51,7 +58,21 @@ function crearCuadroDeforma( name,correo) {
     return cuadrohtml;
 }const cuadrohtmlconInfo = crearCuadroDeforma ()
     
+// Llamar al button submit
 
+
+const  boton = document.getElementById("submit");
+
+submit.addEventListener("click", (e) => {
+  console.log(e.target)
+});
+
+// Validar nombre
+/*function validarNombre(nombre) {
+  if (nombre != " ") {
+    return true;
+  }
+}*/
 
 
 

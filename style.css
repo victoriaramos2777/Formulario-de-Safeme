@@ -6,56 +6,89 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #e5e5f7;
-  background-image: radial-gradient(#c657d8 0.5px, transparent);
+  background-color: rgba(231, 165, 249, 0.8078431373);
+  background-image: radial-gradient(#c657d8 0.5px, transparent 0.5px);
+  background-size: 25px 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  align-items: center;
+  width: 100%;
 }
 
 .form {
   background-color: #fff;
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
   margin: auto;
   padding: 5em 3em;
   border-radius: 10px;
   text-align: center;
   margin-top: 6em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .form__title {
-  font-size: 2em;
+  font-size: 3em;
+  font-weight: 700;
+  background: linear-gradient(to right, rgb(200, 112, 127), rgb(172, 40, 172), rgb(67, 67, 203));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 10%;
-  display: flex;
 }
 .form__title__cont {
   margin-top: 3em;
   display: grid;
-  gap: 2.5em;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-template-rows: repeat(3, 1fr);
 }
 .form__title__cont__cont2 {
   position: relative;
   color: rgba(87, 87, 87, 0.4941176471);
+  width: 100%;
 }
 .form__title__cont__cont2__in {
   width: 100%;
   background-color: none;
-  color: #e5e5f7;
-  font-size: 1rem;
-  padding: 0.6em 0.3em;
+  color: #0b0b0c;
+  font-size: 0.8rem;
+  padding: 0.8em 0.3em;
   border: none;
   outline: none;
   border-bottom: 1px solid rgba(61, 60, 60, 0.4941176471);
   font-family: "Roboto", sans-serif;
 }
 .form__title__cont__cont2__in__la {
-  color: rgba(49, 48, 48, 0.4941176471);
+  color: rgba(19, 18, 18, 0.4941176471);
   cursor: pointer;
   position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(15px);
+  transition: transform 0.5s, color 0.3s;
+}
+
+.form__title__cont__cont2__in:focus + .form__title__cont__cont2__in__la,
+.form__title__cont__cont2__in:not(:placeholder-shown) + .form__title__cont__cont2__in__la {
+  transform: translateX(-12px) scale(0.7);
+  transform-origin: left top;
+  color: blueviolet;
+}
+
+#completo {
+  grid-column: 1/3;
+  width: 100%;
+}
+
+.boton {
+  display: flex;
+}
+.boton__submit {
+  margin-top: 7%;
+  width: 40%;
+  color: #fff;
+  background-image: linear-gradient(to right, rgb(200, 112, 127), rgb(172, 40, 172), rgb(67, 67, 203));
+  border-radius: 1em;
+  padding: 0.5em;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
