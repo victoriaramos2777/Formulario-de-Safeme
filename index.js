@@ -59,32 +59,26 @@ function crearCuadroDeforma( Name, email, Work, telefono, info) {
     <section class="foot">
 
       <div class="foot__cont3">
-         <img src="./assets/img/y2020-05-19-04_generated.jpg" class="foot__cont3__image" alt="">
-         <h4 id="text1" class="">${Name}</h4>
-         <h4 id="text1" class="">${Work}</h4>
+         <img src="./assets/img/y2020-05-19-04_generated.jpg" class="foot__cont3__image" alt="image">
+         <h4  class="foot__cont3__image__name">${Name}</h4>
+         <h4  class="foot__cont3__image__name">${Work}</h4>
 
       </div>
       <div>
-         <div class="foot__cont3__image__respuestas">
-            <div class="foot__cont3__image__respuestas__info">
-               <h2>Informacion</h2>
+         <form class="form-2">
+            <h2 class="form-2__titul">Informacion</h2>
+            <div class="contenedor-inputs">
+               <input type="email" name="email" placeholder="${email}" class="input-50">
+
+               <input type="number" name="telefono" placeholder="${telefono}" class="input-50">
+
+               <input type="text" name="informacion" placeholder="${info}" class="input-100">
+
             </div>
-            <div class="foot__cont3__image__respuestas__info__contenido" id="block1">
-               <label for="email" class="foot__cont3__image__respuestas__info__contenido__input__item">${email}</label>
-               <input type="text" placeholder=" " class="foot__cont3__image__respuestas__info__contenido__input">
-            
-               <label for="email"
-               class="foot__cont3__image__respuestas__info__contenido__input__item">${telefono}</label>
-               <input type="text" placeholder=" " class="foot__cont3__image__respuestas__info__contenido__input">
-            </div>
-            <div class="foot__cont3__image__respuestas__info__contenido" id="block3">
-               <label for="email" class="foot__cont3__image__respuestas__info__contenido__input__item">${info}</label>
-               <input type="text" placeholder=" " class="foot__cont3__image__respuestas__info__contenido__input">
-            </div>
-         </div>
-      </div>
+         </form>
 
    </section>
+
 
    `;
 
