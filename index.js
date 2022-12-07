@@ -53,36 +53,40 @@ submit.addEventListener("click", (e) => {
 
 
 
-function crearCuadroDeforma( name, email, work, telefono, info) {
+function crearCuadroDeforma( Name, email, Work, telefono, info) {
     
     const cuadrohtml = `
-    <footer class="foot">
-    <div class="foot__cont3">
-       <img src="./assets/img/y2020-05-19-04_generated.jpg" class="foot__cont3__image" alt="">
-       <h4 id="text1" class="">${name}</h4>
-       <h4 id="text1" class="">${work}</h4>
-        
-    </div>
-    <div id="respuesta" >
-    <div>
-          <h2 class="info">informacion</h2>
-    </div>
-       <div class="contenido">
-          <input type="text" placeholder=" "class="contenido__input">
-          <label for="email"class="contenido__input__item">${email}</label>
-        </div>
-       <div class="contenido">
-          <input type="text" placeholder=" "class=" contenido__input">
-          <label for="email"class="contenido__input__item">${telefono}</label>
-        </div>
-        <div class="contenido" id="block3">
-          <input type="text" placeholder=" "class="contenido__input">
-          <label for="email"class=" contenido__input__item">${info}</label>
-       </div>
-       </form>
-    </div>
-    
-  </footer>`
+    <section class="foot">
+
+      <div class="foot__cont3">
+         <img src="./assets/img/y2020-05-19-04_generated.jpg" class="foot__cont3__image" alt="">
+         <h4 id="text1" class="">${Name}</h4>
+         <h4 id="text1" class="">${Work}</h4>
+
+      </div>
+      <div>
+         <div class="foot__cont3__image__respuestas">
+            <div class="foot__cont3__image__respuestas__info">
+               <h2>Informacion</h2>
+            </div>
+            <div class="foot__cont3__image__respuestas__info__contenido" id="block1">
+               <label for="email" class="foot__cont3__image__respuestas__info__contenido__input__item">${email}</label>
+               <input type="text" placeholder=" " class="foot__cont3__image__respuestas__info__contenido__input">
+            
+               <label for="email"
+               class="foot__cont3__image__respuestas__info__contenido__input__item">${telefono}</label>
+               <input type="text" placeholder=" " class="foot__cont3__image__respuestas__info__contenido__input">
+            </div>
+            <div class="foot__cont3__image__respuestas__info__contenido" id="block3">
+               <label for="email" class="foot__cont3__image__respuestas__info__contenido__input__item">${info}</label>
+               <input type="text" placeholder=" " class="foot__cont3__image__respuestas__info__contenido__input">
+            </div>
+         </div>
+      </div>
+
+   </section>
+
+   `;
 
     return cuadrohtml;
 }
